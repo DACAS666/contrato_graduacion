@@ -2,5 +2,5 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/TU_USUARIO/contrato_graduacion.git
+git remote add origin https://github.com/DACAS666/contrato_graduacion.git
 git push -u origin main
