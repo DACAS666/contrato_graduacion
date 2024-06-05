@@ -16,11 +16,11 @@ def submit():
     price = request.form['price']
     signature = request.form['signature']
 
-    # Convert signature from base64
+    # Convertir la firma de base64
     signature_data = base64.b64decode(signature.split(',')[1])
     signature_image = BytesIO(signature_data)
 
-    # Create PDF
+    # Crear el PDF
     pdf = FPDF()
     pdf.add_page()
     pdf.set_font('Arial', 'B', 16)
