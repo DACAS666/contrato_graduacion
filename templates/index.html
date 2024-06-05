@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrato de Compra</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <form id="contractForm" method="POST" action="/submit">
+        <label for="buyerName">Nombre del Comprador:</label>
+        <input type="text" id="buyerName" name="buyerName" required>
+
+        <label for="itemDescription">Descripción del Artículo:</label>
+        <input type="text" id="itemDescription" name="itemDescription" required>
+
+        <label for="price">Precio:</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="signature">Firma:</label>
+        <canvas id="signaturePad" width="400" height="200" style="border:1px solid #000000;"></canvas>
+        <button type="button" id="clear">Clear</button>
+        <input type="hidden" id="signature" name="signature">
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
